@@ -1,0 +1,355 @@
+\documentclass{beamer}
+
+%Portuguese-specific commands
+%--------------------------------------
+\usepackage[portuguese]{babel}
+%--------------------------------------
+\definecolor{links}{HTML}{ECF542}
+\hypersetup{colorlinks,linkcolor=,urlcolor=links}
+
+%Hyphenation rules
+%--------------------------------------
+\usepackage{hyphenat}
+\hyphenation{mate-mática recu-perar}
+%-------------------------------------
+
+%-------------------------------------
+\graphicspath{{images/}}
+
+\usetheme{metropolis}
+\metroset{background=dark}
+\metroset{block=fill}
+
+% set captions with numbers
+\setbeamertemplate{caption}[numbered]
+
+\title{Mercado Internacional de Engenharia de Software}
+\date{\today}
+\titlegraphic{\hfill\includegraphics[height=2.5cm]{logo.png}}
+
+\author{Marcos Benevides}
+
+\begin{document}
+
+  \maketitle
+
+  \begin{frame}{Sumário}
+    \setbeamertemplate{section in toc}[sections numbered]
+    \tableofcontents
+  \end{frame}
+
+  %-------------------------------------
+  \section{Apresentação}
+
+  \begin{frame}{Apresentação}
+	\begin{block}{CV}
+        \begin{itemize}[<+->]
+            \item Me formei em Ciência da Computação pela Universidade Federal do Maranhão (2019).
+            \item \texttt{Software Development Engineer II} na empresa americana \texttt{Divisions Maintenence Group}, onde mantenho backends em F\#.
+            \item Outros interesses:
+                $$
+                \begin{Bmatrix}
+                    \texttt{Álgebra} & \texttt{Idris} & \texttt{Haskell} \\
+                    \texttt{Lógica(s)} & \texttt{Métodos Formais} & \texttt{NixOS} \\
+                    \texttt{SQL} & \texttt{Teoria dos Tipos} & \cdots
+                \end{Bmatrix}
+                $$
+        \end{itemize}
+	\end{block}
+
+    \pause[\thebeamerpauses]
+
+    Previamente eu fui \texttt{Lead Devops Engineer} na empresa brasileira \texttt{Datarisk}
+  \end{frame}
+
+  %-------------------------------------
+  \begin{frame}{Apresentação}
+
+    \begin{alertblock}{ALERTA}
+        A palestra é sobre o mercado internacional, mas eu trabalho num nicho desse mercado. Então existe, sim, um viés.
+
+        Porém, tentei destilar alguns princípios genéricos.
+    \end{alertblock}
+
+  \end{frame}
+
+  %-------------------------------------
+  \section{Recomendações}
+  \subsection{Anos 60-80}
+
+  %-------------------------------------
+  \begin{frame}{Livros}
+    \begin{columns}
+        % Column 1
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item<2-> É um livro antigo, contém vários exemplos difíceis de se aplicar hoje, mas é um ótimo livro para se extrair lições sobre gerência de projetos.
+                \item<3-> \texttt{Lei de Brooks}, adicionar mais mão de obra num projeto que está atrasado acaba complicando mais o prazo de entrega.
+            \end{itemize}
+        \end{column}
+        % Column 2    
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+            \centering
+                \includegraphics<1-2>[width=0.8\textwidth]{mmm00.png}
+                \includegraphics<3>[width=0.8\textwidth]{mmm01.png}
+                \caption{The Mythical Man-Month (1975)}
+            \end{figure}
+        \end{column}
+    \end{columns}
+  \end{frame}
+
+  %-------------------------------------
+  \begin{frame}{Xerox Parc}
+    \begin{columns}
+        % Column 1
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}[<+->]
+                \item<2-> Mouse e teclado
+                \item<3-> Janelas
+                \item<4-> Linkagem dinâmica
+                \item<5-> Editores de Texto
+                \item<5-> Hypertexto
+                \item<5-> Hypermedia
+                \item<6-> Edição colaborativa de texto em tempo real
+                \item<6-> Video conferência
+                \item<7-> $\ldots$
+            \end{itemize}
+        \end{column}
+        % Column 2
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+            \centering
+                \includegraphics<1>[width=0.8\textwidth]{tmoad00.jpg}
+                \includegraphics<2>[width=0.8\textwidth]{tmoad01.jpg}
+                \includegraphics<3-4>[width=0.8\textwidth]{tmoad02.jpg}
+                \includegraphics<5>[width=\textwidth]{tmoad03.png}
+                \includegraphics<6>[width=\textwidth]{tmoad04.jpeg}
+                \includegraphics<7>[width=\textwidth]{tmoad05.png}
+                \caption{\href{https://www.youtube.com/watch?v=yJDv-zdhzMY}{Douglas Engelbart - The Mother of all Demos (1968)}}
+            \end{figure}
+        \end{column}
+    \end{columns}
+  \end{frame}
+
+  %-------------------------------------
+  \begin{frame}{Xerox Parc}
+    \begin{columns}
+        % Column 1
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}[<+->]
+                \item<2-> Computador pessoal (Xerox Alto)
+                \item<2-> Dynabook (Laptop/Tablet)
+                \item<3-> GUIs
+                \item<4-> Smalltalk (OOP)
+                \item<5-> Ethernet
+                \item<5-> Email
+                \item<6-> Impressora a laser
+                \item<7-> Computação distribuída
+                \item<7-> $\ldots$
+            \end{itemize}
+        \end{column}
+        % Column 2
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+            \centering
+                \includegraphics[width=0.6\textwidth]{xerox_park.png}
+                \caption{Dealers of Lightning: Xerox Parc and the dawn of the computing age}
+            \end{figure}
+        \end{column}
+    \end{columns}
+  \end{frame}
+
+  %-------------------------------------
+  \begin{frame}{Xerox Parc}
+    \begin{columns}
+        % Column 1
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}[<+->]
+                \item<2-> Como diretor do escritório de Técnicas de Processamento de Informações da ARPA, Taylor financiou o experimento de Engelbart.
+                \item<3-> Taylor então contratou o pioneiro em redes Larry Roberts para supervisionar o projeto ARPAnet, um ancestral importante da Internet.
+            \end{itemize}
+        \end{column}
+        % Column 2
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+            \centering
+                \includegraphics[width=0.7\textwidth]{bob_taylor.jpeg}
+                \caption{Robert "Bob" \, Taylor}
+            \end{figure}
+        \end{column}
+    \end{columns}
+  \end{frame}
+
+  %-------------------------------------
+  \subsection{...}
+  %\begin{frame}{90's}
+  %  \begin{columns}
+  %      % Column 1
+  %      \begin{column}{0.5\textwidth}
+  %          \begin{figure}
+  %          \centering
+  %              \includegraphics[width=0.7\textwidth]{uhhb.png}
+  %              \caption{The UNIX Haters Handbook}
+  %          \end{figure}
+  %      \end{column}
+  %      % Column 2    
+  %      \begin{column}{0.5\textwidth}
+  %          \begin{figure}
+  %          \centering
+  %              \includegraphics[width=0.6\textwidth]{pos.png}
+  %              \caption{Patterns of Software: Tales from the Software Community}
+  %          \end{figure}
+  %      \end{column}
+  %  \end{columns}
+  %\end{frame}
+
+  %-------------------------------------
+  \begin{frame}{Como sobreviver num projeto coringado}
+    \begin{columns}
+        % Column 1
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}[<+->]
+                \item<2-> Todos que trabalham com tecnologia já presenciaram (ou vão presenciar) um projeto desses.
+                \item<3-> Yourdon foca num ponto geralmente ignorado, a política, e oferece alguns insights sobre como lidar com projetos quase impossíveis e as decisões irracionais que levam às suas criações.
+            \end{itemize}
+        \end{column}
+        % Column 2    
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+            \centering
+                \includegraphics[width=\textwidth]{dm.png}
+                \caption{Death March (2002)}
+            \end{figure}
+        \end{column}
+    \end{columns}
+  \end{frame}
+
+  %-------------------------------------
+  \begin{frame}{Bolhas}
+    \begin{columns}
+        % Column 1
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}[<+->]
+                \item<2-> Melhor livro para entender crypto.
+                \item<3-> Razão para o successo dos primeiros e-commerces, como o e-bay.
+                \item<4-> Indiretamente responsável pelo crescimento do Paypal e pagamentos online.
+            \end{itemize}
+        \end{column}
+        % Column 2    
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+            \centering
+                \includegraphics[width=0.8\textwidth]{tgbbb.png}
+                \caption{The Great Beanie Baby Bubble}
+            \end{figure}
+        \end{column}
+    \end{columns}
+  \end{frame}
+
+  %-------------------------------------
+  \section{Networking}
+  \subsection{Faculdade}
+  \begin{frame}{Faculdade + Comunidades}
+    \begin{columns}
+        % Column 1
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+            \centering
+                \includegraphics[width=0.8\textwidth]{university.png}
+                \caption{\textit{Sapientia ducet ad astra}}
+            \end{figure}
+        \end{column}
+        % Column 2    
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+            \centering
+                \includegraphics[width=\textwidth]{pugma.png}
+                \caption{ Python User Group - MA (2017?)}
+            \end{figure}
+        \end{column}
+    \end{columns}
+
+  \end{frame}
+
+  \subsection{Open Source}
+  \begin{frame}{Open Source + Comunidades}
+    \begin{columns}
+        % Column 1
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+            \centering
+                \includegraphics[width=0.7\textwidth]{nixos.png}
+                \caption{\href{https://nixos.org/}{Nix /\ NixOS}}
+            \end{figure}
+        \end{column}
+        % Column 2    
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}[<+->]
+                \item<2-> Contorna a limitação física das comunidades locais.
+                \item<3-> Experiência direta do trabalho remoto.
+                \item<4-> Experiência "simulada" do mercado internacional.
+                \item<5-> Exposição e oportunidade de sair da zona de conforto.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+
+  \end{frame}
+
+  \subsection{Publicações}
+  \begin{frame}{Publicações (relevantes)}
+    \begin{columns}
+        % Column 1
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+            \centering
+                \includegraphics[width=0.8\textwidth]{conf01.png}
+                \caption{Adopting F\# on a Consultancy Project: From Zero to MVP to V0 Launch}
+            \end{figure}
+        \end{column}
+        % Column 2
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+            \centering
+                \includegraphics[width=0.8\textwidth]{conf00.png}
+                \caption{\href{https://www.youtube.com/watch?v=yJDv-zdhzMY}{Lessons from a data science startup using F\# and .Net in a developing country}}
+            \end{figure}
+        \end{column}
+    \end{columns}
+  \end{frame}
+
+  \subsection{Inglês}
+  \begin{frame}{Inglês}
+    \begin{figure}
+    \centering
+        \includegraphics[width=0.6\textwidth]{english.png}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Giga Pros - Club}
+    \begin{figure}
+    \centering
+        \includegraphics[width=\textwidth]{giga.png}
+        \caption{\href{https://gigaprosclub.com/}{gigaprosclub.com}}
+    \end{figure}
+  \end{frame}
+
+  \section{Conclusão}
+  \begin{frame}{O mercado atualmente}
+    \begin{figure}
+    \centering
+        \includegraphics[width=0.7\textwidth]{layoffs.png}
+        \caption{\href{https://layoffs.fyi}{Fonte: layoffs.fyi}}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Perguntas?}
+    Contatos no cyber-espaço:
+
+    \begin{center}\href{https://github.com/mtrsk}{github.com/mtrsk}\end{center}
+    \begin{center}\href{https://www.linkedin.com/in/schonfinkel/}{www.linkedin.com/in/schonfinkel}\end{center}
+    \begin{center}\href{https://mtrsk.github.io}{mtrsk.github.io}\end{center}
+
+  \end{frame}
+
+\end{document}

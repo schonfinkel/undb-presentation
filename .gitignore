@@ -1,0 +1,30 @@
+# Compiled
+*.elc
+
+# Packaging
+.cask
+
+# Backup files
+*~
+
+# Undo-tree save-files
+*.~undo-tree
+
+# Ignore generated files
+*.pdf
+*.log
+*.nav
+*.snm
+*.out
+*.aux
+*.toc
+
+# Except LaTeX templates
+!tex/*.tex
+
+\#*
+
+# Nix
+.devenv
+.envrc
+result

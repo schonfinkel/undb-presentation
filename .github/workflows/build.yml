@@ -1,0 +1,54 @@
+name: Build PDF
+
+on:
+  push:
+    paths:
+      - '.github'
+      - 'main.tex'
+      - 'Makefile'
+    braches:
+      - main
+  pull_request:
+    paths:
+      - '.github'
+      - 'main.tex'
+      - 'Makefile'
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: 'true'
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v17
+        with:
+          # Mostly to avoid GitHub rate limiting
+          extra_nix_config: |
+            access-tokens = github.com=${{ github.token }}
+
+      - name: Install Nix Cache
+        uses: DeterminateSystems/magic-nix-cache-action@main
+
+      - name: Build PDF
+        run: |
+          nix build -L ".#document"  
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: slide
+          path: result/slide.pdf
