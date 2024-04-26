@@ -52,3 +52,5 @@ jobs:
         with:
           name: slide
           path: result/slide.pdf
+          retention-days: 15
+          overwrite: true
